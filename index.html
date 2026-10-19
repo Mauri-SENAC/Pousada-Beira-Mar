@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pousada Beira Mar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Topo do site -->
+    <header>
+        <h1>Pousada Beira Mar</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#galeria">Fotos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h2>Venha curtir suas férias na praia!</h2>
+        <p>Quartos confortáveis, piscina e café da manhã incluso.</p>
+        <button onclick="mostrarPromocao()">Ver Promoção do Mês</button>
+        <p id="texto-promocao"></p>
+    </div>
+
+    <!-- Descrição da Pousada -->
+    <section id="sobre" class="secao">
+        <h2>Sobre a Pousada</h2>
+        <p class="descricao">
+            A Pousada Beira Mar fica de frente para a praia e conta com ambiente familiar, 
+            Wi-Fi grátis, estacionamento, piscina adulta e infantil e quartos com ar-condicionado.
+        </p>
+
+        <div class="caixas">
+            <div class="caixa">
+                <h3>Suítes Completas</h3>
+                <p>Ar-condicionado, TV, frigobar e varanda com rede.</p>
+            </div>
+            <div class="caixa">
+                <h3>Café da Manhã</h3>
+                <p>Pães, bolos caseiros, frutas e sucos naturais todos os dias.</p>
+            </div>
+            <div class="caixa">
+                <h3>Pé na Areia</h3>
+                <p>Saída direto para o mar com cadeiras e guarda-sol.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section id="galeria" class="secao fundo-cinza">
+        <h2>Galeria de Fotos</h2>
+        <p>Clique nas fotos ou veja nosso espaço abaixo:</p>
+
+        <div class="galeria">
+            <div class="foto">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=500" alt="Piscina">
+                <p>Piscina da Pousada</p>
+            </div>
+            <div class="foto">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500" alt="Quarto">
+                <p>Suíte Casal</p>
+            </div>
+            <div class="foto">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" alt="Praia">
+                <p>Praia em Frente</p>
+            </div>
+            <div class="foto">
+                <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500" alt="Café">
+                <p>Café da Manhã</p>
+            </div>
+            <div class="foto">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500" alt="Jardim">
+                <p>Área de Lazer</p>
+            </div>
+            <div class="foto">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500" alt="Pôr do sol">
+                <p>Fim de Tarde</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="secao">
+        <h2>Contato e Reservas</h2>
+        <p><strong>Endereço:</strong> Av. Beira Mar, 450 - Praia Grande</p>
+        <p><strong>WhatsApp:</strong> (48) 99999-1234</p>
+        <p><strong>E-mail:</strong> contato@pousadabeiramar.com.br</p>
+
+        <div class="formulario">
+            <h3>Mande uma mensagem</h3>
+            <label>Seu nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+            <label>Seu e-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+
+            <label>Quantos dias pretende ficar?</label>
+            <input type="number" id="dias" placeholder="Ex: 3">
+
+            <label>Mensagem:</label>
+            <textarea id="mensagem" rows="3" placeholder="Digite sua dúvida"></textarea>
+
+            <button onclick="enviarContato()">Enviar Reserva</button>
+            <p id="resposta-form"></p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Pousada Beira Mar - Grupo 2</p>
+    </footer>
+
+    <!-- Ligando o JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

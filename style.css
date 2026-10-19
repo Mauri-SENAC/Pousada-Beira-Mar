@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.banner {
+    background-color: #0096c7;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.banner button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffb703;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#texto-promocao {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff3b0;
+}
+
+.secao {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.secao h2 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+}
+
+.fundo-cinza {
+    background-color: #f2f2f2;
+    max-width: 100%;
+}
+
+.caixas, .galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+}
+
+.caixa {
+    background-color: #e0f4ff;
+    padding: 20px;
+    width: 280px;
+    border-radius: 8px;
+}
+
+.foto {
+    background-color: white;
+    padding: 10px;
+    width: 280px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.foto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.foto p {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.formulario {
+    max-width: 400px;
+    margin: 25px auto 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.formulario input, .formulario textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario button {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#resposta-form {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #03045e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
