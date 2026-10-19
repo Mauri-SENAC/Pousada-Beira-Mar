@@ -1,7 +1,5 @@
-/* Importando fonte moderna do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -19,12 +17,12 @@ body {
     line-height: 1.6;
 }
 
-/* ================= CABEÇALHO E MENU ================= */
+/* ================= CABEÇALHO ================= */
 header {
-    background-color: rgba(11, 57, 72, 0.95);
+    background-color: rgba(11, 57, 72, 0.96);
     backdrop-filter: blur(10px);
     color: #ffffff;
-    padding: 18px 8%;
+    padding: 16px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,104 +32,166 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 header h1 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
-    letter-spacing: 0.5px;
     color: #38bdf8;
 }
 
+.selo-topo {
+    background-color: rgba(56, 189, 248, 0.2);
+    color: #7dd3fc;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
 nav {
-    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 nav a {
     color: #f1f5f9;
     text-decoration: none;
-    margin-left: 28px;
     font-weight: 500;
     font-size: 15px;
-    position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
-/* Linha animada embaixo dos links do menu */
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #38bdf8;
-    transition: width 0.3s ease;
+.btn-menu {
+    background-color: #0284c7;
+    padding: 8px 18px;
+    border-radius: 50px;
+    color: #fff !important;
+    font-weight: 600;
 }
 
-nav a:hover::after {
-    width: 100%;
+.btn-menu:hover {
+    background-color: #0369a1;
 }
 
-/* ================= BANNER PRINCIPAL ================= */
+/* ================= BANNER HERO ================= */
 .banner {
-    background: linear-gradient(rgba(11, 57, 72, 0.65), rgba(11, 57, 72, 0.75)),
+    background: linear-gradient(rgba(8, 40, 52, 0.72), rgba(8, 40, 52, 0.82)),
                 url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600') center/cover no-repeat;
     color: #ffffff;
     text-align: center;
-    padding: 130px 20px;
+    padding: 100px 20px 70px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.badge-hero {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: #fde047;
+    font-weight: 500;
 }
 
 .banner h2 {
-    font-size: 42px;
+    font-size: 44px;
     font-weight: 700;
-    margin-bottom: 12px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 750px;
+    line-height: 1.2;
+    margin-bottom: 16px;
 }
 
 .banner p {
-    font-size: 18px;
-    max-width: 600px;
+    font-size: 17px;
+    max-width: 650px;
     color: #e2e8f0;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
 }
 
-.banner button {
-    margin-top: 20px;
-    padding: 14px 32px;
+.botoes-banner {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-principal {
+    padding: 14px 30px;
     background: linear-gradient(135deg, #f59e0b, #ea580c);
     color: #ffffff;
-    border: none;
+    text-decoration: none;
     border-radius: 50px;
-    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.4);
+    transition: transform 0.3s;
+}
+
+.btn-secundario {
+    padding: 14px 28px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.banner button:hover {
+.btn-principal:hover, .btn-secundario:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(234, 88, 12, 0.6);
 }
 
-/* Caixa da promoção (só aparece quando o JS coloca texto) */
 #texto-promocao:not(:empty) {
-    margin-top: 25px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 24px;
+    background-color: rgba(22, 101, 52, 0.9);
+    border: 1px solid #86efac;
     padding: 12px 24px;
     border-radius: 10px;
-    color: #fde047;
+    color: #fef08a;
     font-weight: 600;
-    font-size: 16px;
+}
+
+/* Barra de Estatísticas */
+.status-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 55px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 22px 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-item strong {
+    font-size: 24px;
+    color: #38bdf8;
+}
+
+.status-item span {
+    font-size: 13px;
+    color: #cbd5e1;
 }
 
 /* ================= SEÇÕES GERAIS ================= */
@@ -142,30 +202,26 @@ nav a:hover::after {
     text-align: center;
 }
 
+.subtitulo-topo {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0284c7;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
 .secao h2 {
     color: #0b3948;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-}
-
-/* Detalhe azul embaixo dos títulos H2 */
-.secao h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #0284c7;
-    margin: 8px auto 0 auto;
-    border-radius: 2px;
 }
 
 .descricao {
     max-width: 720px;
-    margin: 15px auto 45px auto;
-    font-size: 17px;
+    margin: 0 auto 40px auto;
+    font-size: 16px;
     color: #475569;
 }
 
@@ -174,94 +230,171 @@ nav a:hover::after {
     max-width: 100%;
 }
 
-/* ================= CARDS SOBRE A POUSADA ================= */
+/* ================= CARDS E SUÍTES ================= */
 .caixas, .galeria {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 28px;
     max-width: 1100px;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
 }
 
-.caixa {
+.caixa, .card-suite {
     background-color: #ffffff;
-    padding: 35px 25px;
-    width: 320px;
+    padding: 32px 24px;
+    width: 330px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     border-top: 4px solid #0284c7;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-.caixa:hover {
+.caixa:hover, .card-suite:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 35px rgba(2, 132, 199, 0.12);
 }
 
-.caixa h3 {
-    color: #0b3948;
-    font-size: 20px;
+.icone-caixa {
+    font-size: 38px;
     margin-bottom: 12px;
 }
 
-.caixa p {
-    color: #64748b;
-    font-size: 15px;
+.destaque-suite {
+    border-top: 4px solid #f59e0b;
+    transform: scale(1.03);
 }
 
-/* ================= GALERIA DE FOTOS ================= */
+.tag-suite {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.tag-ouro {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.preco-suite {
+    margin-top: 18px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0b3948;
+}
+
+.preco-suite span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #64748b;
+}
+
+/* ================= GALERIA ================= */
 .foto {
     background-color: #ffffff;
-    padding: 12px;
-    width: 320px;
+    width: 330px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .foto:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .foto img {
     width: 100%;
     height: 210px;
     object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.4s ease;
+    display: block;
 }
 
-.foto:hover img {
-    transform: scale(1.05);
+.legenda-foto {
+    padding: 15px;
+    text-align: left;
 }
 
-.foto p {
-    margin-top: 14px;
-    margin-bottom: 4px;
+.legenda-foto span {
+    font-size: 12px;
+    color: #0284c7;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.legenda-foto p {
     font-weight: 600;
     color: #0b3948;
     font-size: 16px;
+    margin-top: 2px;
+}
+
+/* ================= DEPOIMENTOS ================= */
+.estrelas {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.autor-depoimento {
+    display: block;
+    margin-top: 15px;
+    color: #0b3948;
 }
 
 /* ================= CONTATO E FORMULÁRIO ================= */
-#contato p {
-    margin-bottom: 8px;
-    color: #475569;
-    font-size: 16px;
+.contato-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.info-contato {
+    flex: 1;
+    min-width: 300px;
+    max-width: 440px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.info-contato h3 {
+    color: #0b3948;
+    margin-bottom: 16px;
+}
+
+.info-contato p {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.aviso-python {
+    margin-top: 20px;
+    background-color: #f0f9ff;
+    border-left: 4px solid #0284c7;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 .formulario {
+    flex: 1;
+    min-width: 320px;
     max-width: 480px;
-    margin: 35px auto 0 auto;
-    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 12px;
     background-color: #ffffff;
-    padding: 35px;
+    padding: 32px;
     border-radius: 16px;
     box-shadow: 0 15px 35px rgba(11, 57, 72, 0.08);
     border: 1px solid #e2e8f0;
@@ -269,37 +402,34 @@ nav a:hover::after {
 
 .formulario h3 {
     color: #0b3948;
-    font-size: 22px;
-    margin-bottom: 8px;
-    text-align: center;
+    margin-bottom: 6px;
 }
 
 .formulario label {
     font-size: 14px;
     font-weight: 600;
-    color: #334155;
 }
 
 .formulario input,
+.formulario select,
 .formulario textarea {
-    padding: 12px 14px;
+    padding: 12px;
     border: 1.5px solid #cbd5e1;
     border-radius: 8px;
     font-size: 15px;
     background-color: #f8fafc;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     outline: none;
 }
 
 .formulario input:focus,
+.formulario select:focus,
 .formulario textarea:focus {
     border-color: #0284c7;
     background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
 }
 
 .formulario button {
-    margin-top: 10px;
+    margin-top: 8px;
     background: linear-gradient(135deg, #0284c7, #0369a1);
     color: #ffffff;
     padding: 14px;
@@ -308,24 +438,16 @@ nav a:hover::after {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.formulario button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
-}
-
-/* Mensagem de confirmação do formulário */
 #resposta-form:not(:empty) {
     background-color: #dcfce7;
     color: #166534;
     border: 1px solid #86efac;
-    padding: 12px;
+    padding: 14px;
     border-radius: 8px;
     font-weight: 600;
-    text-align: center;
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 14px;
 }
 
@@ -334,32 +456,22 @@ footer {
     background-color: #0b3948;
     color: #cbd5e1;
     text-align: center;
-    padding: 25px 20px;
+    padding: 30px 20px;
     margin-top: 40px;
     font-size: 14px;
 }
 
-/* ================= RESPONSIVIDADE (CELULAR) ================= */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 12px;
-        padding: 15px 20px;
     }
-
-    nav a {
-        margin: 0 12px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
-
-    .banner {
-        padding: 90px 20px;
-    }
-
     .banner h2 {
         font-size: 30px;
-    }
-
-    .formulario {
-        padding: 25px 20px;
     }
 }

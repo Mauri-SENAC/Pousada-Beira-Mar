@@ -3,118 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pousada Beira Mar</title>
+    <title>Pousada Beira Mar | Conforto Pé na Areia</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Motor Brython para rodar o código Python no navegador -->
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.12.0/brython_stdlib.js"></script>
 </head>
-<body>
+<body onload="brython()">
 
-    <!-- Topo do site -->
+    <!-- ================= CABEÇALHO ================= -->
     <header>
-        <h1>Pousada Beira Mar</h1>
+        <div class="logo-area">
+            <h1>🌊 Pousada Beira Mar</h1>
+            <span class="selo-topo">Litoral SC</span>
+        </div>
         <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#galeria">Fotos</a>
-            <a href="#contato">Contato</a>
+            <a href="#sobre">A Pousada</a>
+            <a href="#suites">Suítes</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#avaliacoes">Avaliações</a>
+            <a href="#contato" class="btn-menu">Reservar Agora</a>
         </nav>
     </header>
 
-    <!-- Banner -->
-    <div class="banner">
-        <h2>Venha curtir suas férias na praia!</h2>
-        <p>Quartos confortáveis, piscina e café da manhã incluso.</p>
-        <button onclick="mostrarPromocao()">Ver Promoção do Mês</button>
-        <p id="texto-promocao"></p>
-    </div>
+    <!-- ================= BANNER PRINCIPAL (HERO) ================= -->
+    <section class="banner">
+        <span class="badge-hero">⭐ Nota 4.9 pelos hóspedes • Pé na Areia</span>
+        <h2>Acorde todos os dias com a brisa do mar</h2>
+        <p>Descanso, natureza e gastronomia caseira em um refúgio exclusivo para você e sua família aproveitarem o melhor do litoral.</p>
+        
+        <div class="botoes-banner">
+            <a href="#contato" class="btn-principal">Simular Reserva</a>
+            <button id="btn-promocao" class="btn-secundario">🎁 Ver Promoção do Mês</button>
+        </div>
 
-    <!-- Descrição da Pousada -->
+        <p id="texto-promocao"></p>
+
+        <!-- Barra de números rápidos -->
+        <div class="status-bar">
+            <div class="status-item">
+                <strong>+1.200</strong>
+                <span>Hóspedes Felizes</span>
+            </div>
+            <div class="status-item">
+                <strong>50m</strong>
+                <span>De distância do mar</span>
+            </div>
+            <div class="status-item">
+                <strong>Incluso</strong>
+                <span>Café Colonial Completo</span>
+            </div>
+            <div class="status-item">
+                <strong>24h</strong>
+                <span>Recepção e Segurança</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEÇÃO 1: SOBRE A POUSADA ================= -->
     <section id="sobre" class="secao">
-        <h2>Sobre a Pousada</h2>
+        <span class="subtitulo-topo">BEM-VINDO AO PARAÍSO</span>
+        <h2>Sobre a Pousada Beira Mar</h2>
         <p class="descricao">
-            A Pousada Beira Mar fica de frente para a praia e conta com ambiente familiar, 
-            Wi-Fi grátis, estacionamento, piscina adulta e infantil e quartos com ar-condicionado.
+            Fundada com o objetivo de oferecer hospitalidade acolhedora e contato direto com a natureza, a <strong>Pousada Beira Mar</strong> combina arquitetura charmosa com estrutura completa de lazer. Aqui você aproveita piscina com vista para o mar, Wi-Fi fibra óptica em toda a área, estacionamento privativo gratuito e acesso direto à areia da praia.
         </p>
 
         <div class="caixas">
             <div class="caixa">
-                <h3>Suítes Completas</h3>
-                <p>Ar-condicionado, TV, frigobar e varanda com rede.</p>
+                <div class="icone-caixa">🛌</div>
+                <h3>Suítes Climatizadas</h3>
+                <p>Quartos equipados com ar-condicionado Split, Smart TV, cama Queen Size, frigobar abastecido e varanda privativa com rede.</p>
             </div>
             <div class="caixa">
-                <h3>Café da Manhã</h3>
-                <p>Pães, bolos caseiros, frutas e sucos naturais todos os dias.</p>
+                <div class="icone-caixa">🥐</div>
+                <h3>Café da Manhã Colonial</h3>
+                <p>Buffet diário com mais de 30 itens: pães artesanais, bolos caseiros, frutas da estação, tapiocas feitas na hora e sucos naturais.</p>
             </div>
             <div class="caixa">
-                <h3>Pé na Areia</h3>
-                <p>Saída direto para o mar com cadeiras e guarda-sol.</p>
+                <div class="icone-caixa">🏖️</div>
+                <h3>Serviço de Praia & Piscina</h3>
+                <p>Piscina adulto e infantil aquecida com deck panorâmico, além de cadeiras, guarda-sóis e toalhas exclusivas na praia.</p>
             </div>
         </div>
     </section>
 
-    <!-- Galeria de Fotos -->
-    <section id="galeria" class="secao fundo-cinza">
+    <!-- ================= SEÇÃO 2: NOSSAS SUÍTES ================= -->
+    <section id="suites" class="secao fundo-cinza">
+        <span class="subtitulo-topo">CONFORTO & DESCANSO</span>
+        <h2>Nossas Acomodações</h2>
+        <p class="descricao">Escolha a opção ideal para a sua viagem e calcule o valor na seção de reservas abaixo.</p>
+
+        <div class="caixas">
+            <div class="card-suite">
+                <span class="tag-suite">Mais Econômica</span>
+                <h3>Suíte Brisa (Casal)</h3>
+                <p>Ideal para casais. Conta com cama de casal, ar-condicionado, TV 43", banheiro privativo e vista para o jardim tropical.</p>
+                <div class="preco-suite">R$ 180 <span>/ diária</span></div>
+            </div>
+
+            <div class="card-suite destaque-suite">
+                <span class="tag-suite tag-ouro">Mais Escolhida</span>
+                <h3>Suíte Master Vista Mar</h3>
+                <p>Varanda de frente para o mar com rede, banheira de hidromassagem, cama King Size, cafeteira expresso e ar-condicionado.</p>
+                <div class="preco-suite">R$ 260 <span>/ diária</span></div>
+            </div>
+
+            <div class="card-suite">
+                <span class="tag-suite">Para Famílias</span>
+                <h3>Chalé Família Completo</h3>
+                <p>Espaço amplo para até 5 pessoas com dois quartos, pequena cozinha equipada, churrasqueira na varanda e rede.</p>
+                <div class="preco-suite">R$ 350 <span>/ diária</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEÇÃO 3: GALERIA DE FOTOS ================= -->
+    <section id="galeria" class="secao">
+        <span class="subtitulo-topo">NOSSO ESPAÇO</span>
         <h2>Galeria de Fotos</h2>
-        <p>Clique nas fotos ou veja nosso espaço abaixo:</p>
+        <p class="descricao">Conheça cada detalhe preparado para tornar suas férias inesquecíveis.</p>
 
         <div class="galeria">
             <div class="foto">
-                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=500" alt="Piscina">
-                <p>Piscina da Pousada</p>
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600" alt="Piscina da Pousada">
+                <div class="legenda-foto">
+                    <span>Lazer</span>
+                    <p>Piscina com Borda Infinita</p>
+                </div>
             </div>
             <div class="foto">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500" alt="Quarto">
-                <p>Suíte Casal</p>
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600" alt="Suíte Master">
+                <div class="legenda-foto">
+                    <span>Conforto</span>
+                    <p>Suíte Master Vista Mar</p>
+                </div>
             </div>
             <div class="foto">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" alt="Praia">
-                <p>Praia em Frente</p>
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Praia em frente">
+                <div class="legenda-foto">
+                    <span>Natureza</span>
+                    <p>Praia em Frente à Pousada</p>
+                </div>
             </div>
             <div class="foto">
-                <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500" alt="Café">
-                <p>Café da Manhã</p>
+                <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600" alt="Café da Manhã">
+                <div class="legenda-foto">
+                    <span>Gastronomia</span>
+                    <p>Café da Manhã Artesanal</p>
+                </div>
             </div>
             <div class="foto">
-                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500" alt="Jardim">
-                <p>Área de Lazer</p>
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600" alt="Área Externa">
+                <div class="legenda-foto">
+                    <span>Estrutura</span>
+                    <p>Jardim e Lounges Externos</p>
+                </div>
             </div>
             <div class="foto">
-                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500" alt="Pôr do sol">
-                <p>Fim de Tarde</p>
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600" alt="Pôr do Sol">
+                <div class="legenda-foto">
+                    <span>Experiência</span>
+                    <p>Entardecer no Deck</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
+    <!-- ================= SEÇÃO 4: AVALIAÇÕES ================= -->
+    <section id="avaliacoes" class="secao fundo-cinza">
+        <span class="subtitulo-topo">DEPOIMENTOS</span>
+        <h2>O que dizem nossos hóspedes</h2>
+        <div class="caixas">
+            <div class="caixa">
+                <p class="estrelas">⭐⭐⭐⭐⭐</p>
+                <p>"Lugar maravilhoso! Limpeza impecável, funcionários super educados e o café da manhã parece de hotel 5 estrelas."</p>
+                <strong class="autor-depoimento">— Mariana Costa</strong>
+            </div>
+            <div class="caixa">
+                <p class="estrelas">⭐⭐⭐⭐⭐</p>
+                <p>"A localização é perfeita, literalmente pé na areia. As crianças aproveitaram a piscina o dia inteiro. Voltaremos com certeza!"</p>
+                <strong class="autor-depoimento">— Ricardo Almeida</strong>
+            </div>
+            <div class="caixa">
+                <p class="estrelas">⭐⭐⭐⭐⭐</p>
+                <p>"Ficamos na Suíte Master e a vista do nascer do sol na varanda não tem preço. Wi-Fi muito rápido e quarto super cheiroso."</p>
+                <strong class="autor-depoimento">— Fernanda & Lucas</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEÇÃO 5: CONTATO E RESERVA ================= -->
     <section id="contato" class="secao">
-        <h2>Contato e Reservas</h2>
-        <p><strong>Endereço:</strong> Av. Beira Mar, 450 - Praia Grande</p>
-        <p><strong>WhatsApp:</strong> (48) 99999-1234</p>
-        <p><strong>E-mail:</strong> contato@pousadabeiramar.com.br</p>
+        <span class="subtitulo-topo">FALE CONOSCO</span>
+        <h2>Contato e Simulador de Reserva</h2>
+        <p class="descricao">Preencha os dados abaixo para simular na hora o valor da sua estadia (com 10% de desconto automático para 5 diárias ou mais!).</p>
 
-        <div class="formulario">
-            <h3>Mande uma mensagem</h3>
-            <label>Seu nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+        <div class="contato-grid">
+            <!-- Coluna da Esquerda: Informações -->
+            <div class="info-contato">
+                <h3>📍 Informações de Atendimento</h3>
+                <p><strong>Endereço:</strong> Av. Atlântica Beira Mar, nº 450 - Praia Bela, SC</p>
+                <p><strong>WhatsApp / Telefone:</strong> (48) 99999-1234</p>
+                <p><strong>E-mail:</strong> reservas@pousadabeiramar.com.br</p>
+                <p><strong>Horário de Check-in:</strong> A partir das 14h00</p>
+                <p><strong>Horário de Check-out:</strong> Até às 12h00</p>
+                
+                <div class="aviso-python">
+                    ✨ <strong>Vantagem Exclusiva:</strong><br>
+                    Reservas a partir de 5 diárias ganham 10% de desconto + passeio de barco cortesia.
+                </div>
+            </div>
 
-            <label>Seu e-mail:</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail">
+            <!-- Coluna da Direita: Formulário -->
+            <div class="formulario">
+                <h3>Simular e Solicitar Reserva</h3>
 
-            <label>Quantos dias pretende ficar?</label>
-            <input type="number" id="dias" placeholder="Ex: 3">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Ex: João Silva">
 
-            <label>Mensagem:</label>
-            <textarea id="mensagem" rows="3" placeholder="Digite sua dúvida"></textarea>
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" placeholder="seuemail@exemplo.com">
 
-            <button onclick="enviarContato()">Enviar Reserva</button>
-            <p id="resposta-form"></p>
+                <label for="suite">Escolha a Acomodação:</label>
+                <select id="suite">
+                    <option value="180">Suíte Brisa Casal (R$ 180/dia)</option>
+                    <option value="260">Suíte Master Vista Mar (R$ 260/dia)</option>
+                    <option value="350">Chalé Família Completo (R$ 350/dia)</option>
+                </select>
+
+                <label for="dias">Quantidade de Diárias:</label>
+                <input type="number" id="dias" min="1" max="30" placeholder="Ex: 5">
+
+                <label for="mensagem">Observações ou Datas:</label>
+                <textarea id="mensagem" rows="3" placeholder="Ex: Gostaria de reservar para o próximo feriado..."></textarea>
+
+                <button id="btn-calcular">Calcular e Solicitar Reserva</button>
+                <p id="resposta-form"></p>
+            </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- ================= RODAPÉ ================= -->
     <footer>
-        <p>Pousada Beira Mar - Grupo 2</p>
+        <p><strong>🌊 Pousada Beira Mar</strong> — Todos os direitos reservados © 2026</p>
+        <p>Projeto desenvolvido pelo <strong>Grupo 2</strong></p>
     </footer>
 
-    <!-- Ligando o JavaScript -->
-    <script src="script.js"></script>
+    <!-- ================= LÓGICA EM PYTHON (INVISÍVEL NA TELA) ================= -->
+    <script type="text/python">
+from browser import document, alert
+
+def mostrar_promocao(evento):
+    pacotes = "🔥 OFERTA DO MÊS: Reserve 5 ou mais diárias e ganhe 10% de desconto + Passeio de Barco grátis!"
+    document["texto-promocao"].text = pacotes
+
+def calcular_reserva(evento):
+    nome = document["nome"].value.strip()
+    email = document["email"].value.strip()
+    dias_texto = document["dias"].value.strip()
+    valor_suite = int(document["suite"].value)
+
+    if nome == "" or email == "" or dias_texto == "":
+        alert("Por favor, preencha o Nome, E-mail e a Quantidade de Diárias!")
+        return
+
+    dias = int(dias_texto)
+    if dias <= 0:
+        alert("A quantidade de diárias deve ser pelo menos 1 dia!")
+        return
+
+    subtotal = dias * valor_suite
+
+    if dias >= 5:
+        desconto = subtotal * 0.10
+        total = subtotal - desconto
+        msg_desconto = " (com 10% de desconto aplicado!)"
+    else:
+        total = subtotal
+        msg_desconto = ""
+
+    document["resposta-form"].text = (
+        f"✅ Olá, {nome}! Pedido recebido para {dias} diárias. "
+        f"Valor estimado: R$ {total:.2f}{msg_desconto}. Entraremos em contato pelo e-mail {email}!"
+    )
+
+document["btn-promocao"].bind("click", mostrar_promocao)
+document["btn-calcular"].bind("click", calcular_reserva)
+    </script>
+
 </body>
 </html>
