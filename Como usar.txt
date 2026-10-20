@@ -1,0 +1,56 @@
+Como funciona o site da Pousada Beira Mar
+O site da Pousada Beira Mar foi desenvolvido com o objetivo de apresentar a pousada aos visitantes, mostrar suas acomodações e facilitar o processo de simulação de reservas. Ele possui uma interface simples, organizada e intuitiva, permitindo que os usuários encontrem as informações de que precisam de maneira rápida e prática.
+
+1. Cabeçalho e menu de navegação
+Na parte superior do site, encontramos o nome da pousada e um menu de navegação com links para diferentes seções: A Pousada, Suítes, Galeria, Avaliações e Reservar Agora. Ao clicar em uma dessas opções, o usuário é direcionado automaticamente para a seção correspondente da página.
+
+2. Banner principal e promoções
+Na página inicial, há um banner de destaque com uma mensagem de boas-vindas, apresentando a proposta da pousada e seus principais atrativos. Nessa área, o visitante encontra o botão “Simular Reserva”, que leva diretamente à seção de contato e reservas.
+
+Também existe o botão “Ver Promoção do Mês”. Quando clicado, ele exibe uma mensagem informando que reservas de cinco diárias ou mais recebem 10% de desconto e um passeio de barco gratuito. Essa funcionalidade foi programada em Python utilizando a biblioteca Brython, que permite executar código Python diretamente no navegador.
+
+3. Apresentação da pousada
+Na seção “Sobre a Pousada”, são apresentadas informações sobre a estrutura e os serviços oferecidos, como suítes climatizadas, café da manhã colonial, piscina, Wi-Fi e serviços de praia. O objetivo é mostrar ao visitante os benefícios de se hospedar no local.
+
+4. Apresentação das acomodações
+Na seção “Nossas Acomodações”, o usuário pode conhecer três opções de hospedagem: Suíte Brisa Casal, Suíte Master Vista Mar e Chalé Família Completo. Cada opção apresenta uma descrição de suas características e o preço da diária.
+
+Os valores são utilizados posteriormente no simulador de reservas, permitindo que o visitante calcule uma estimativa do custo de sua estadia de acordo com a acomodação escolhida e a quantidade de diárias.
+
+5. Galeria de fotos
+A galeria apresenta imagens da piscina, das suítes, da praia, do café da manhã e de outras áreas da pousada. Essa seção permite que os visitantes tenham uma ideia visual do ambiente e conheçam melhor a estrutura oferecida.
+
+6. Avaliações dos hóspedes
+Na seção de avaliações, são exibidos depoimentos acompanhados de estrelas, representando opiniões de hóspedes sobre aspectos como limpeza, atendimento, localização, conforto e café da manhã. Essa área foi criada para transmitir confiança e ajudar os visitantes a conhecer a experiência de hospedagem apresentada pelo site.
+
+7. Contato e simulador de reservas
+Uma das principais funcionalidades do site é o simulador de reservas. Nele, o usuário pode informar seu nome completo, e-mail, acomodação desejada, quantidade de diárias e observações sobre as datas ou necessidades da viagem.
+
+Ao clicar no botão “Calcular e Solicitar Reserva”, o sistema verifica se os campos obrigatórios foram preenchidos. Caso falte alguma informação, uma mensagem de alerta solicita que o usuário complete os dados necessários.
+
+Se as informações estiverem preenchidas corretamente, o programa calcula o valor estimado da hospedagem multiplicando o preço da diária pela quantidade de dias escolhida. Quando a reserva possui cinco diárias ou mais, o sistema aplica automaticamente um desconto de 10% sobre o valor total.
+
+Por exemplo, se o visitante escolher a Suíte Brisa, com diária de R$ 180, e informar cinco diárias, o cálculo será:
+
+Valor sem desconto: 5 × R$ 180 = R$ 900,00.
+Desconto de 10%: R$ 90,00.
+Valor final estimado: R$ 810,00.
+Após realizar o cálculo, o site exibe uma mensagem personalizada com o nome do visitante, a quantidade de diárias, o valor estimado e o e-mail informado.
+
+É importante destacar que essa funcionalidade realiza apenas uma simulação e apresenta uma mensagem de solicitação. O código atual não verifica a disponibilidade real dos quartos, não envia efetivamente os dados por e-mail e não confirma uma reserva.
+
+8. Tecnologias utilizadas
+O projeto utiliza três tecnologias principais:
+
+HTML: responsável pela estrutura do site, organizando os títulos, textos, imagens, botões, menus e formulários.
+CSS: responsável pela aparência visual da página, incluindo cores, fontes, espaçamentos, organização dos elementos e adaptação do layout.
+Python com Brython: responsável pela lógica das funcionalidades interativas, como exibir a promoção, validar os campos e calcular o valor estimado das reservas.
+A biblioteca Brython permite executar o código Python dentro do navegador e interagir com os elementos HTML da página. Dessa forma, os botões conseguem executar ações e apresentar resultados sem que seja necessário recarregar o site.
+
+9. Rodapé
+Na parte inferior da página, o rodapé apresenta o nome da pousada, a informação de direitos reservados e a identificação do grupo responsável pelo desenvolvimento do projeto.
+
+Conclusão
+O site da Pousada Beira Mar foi desenvolvido para oferecer uma experiência de navegação simples e agradável, reunindo informações sobre a pousada, suas acomodações, imagens, avaliações e formas de contato. Seu principal diferencial é o simulador de reservas, que permite calcular o custo estimado da hospedagem e aplicar automaticamente descontos para estadias mais longas.
+
+O projeto demonstra como HTML, CSS e Python, com o auxílio da biblioteca Brython, podem ser utilizados em conjunto para criar uma página interativa, informativa e funcional. Embora o sistema ainda não realize reservas efetivas, ele apresenta uma base para futuras melhorias, como integração com banco de dados, envio automático de e-mails e verificação da disponibilidade das acomodações.
